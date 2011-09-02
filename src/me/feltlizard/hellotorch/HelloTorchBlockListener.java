@@ -23,7 +23,8 @@ public class HelloTorchBlockListener extends BlockListener {
 		Block block = event.getBlockPlaced();
 		//gets placed block
 		
-		if (block.getType() == Material.TORCH) {
+		
+		if (block.getType() == Material.TORCH && Global.num == 1) {
 			//if block is a torch it says what's in the " " and if it isn't then nothing happens.
 			player.sendMessage("Hello, " + name);
 		}
