@@ -22,10 +22,11 @@ public class HelloTorchBlockListener extends BlockListener {
 		Block block = event.getBlockPlaced();
 		//gets placed block
 		
-		
-		player.sendMessage(HelloTorch.config.getString(Integer.toString(block.getTypeId()), "You placed a " + block.getType().toString()));
-		
+		if (Global.num == 1) {
+			player.sendMessage(HelloTorch.config.getString(Integer.toString(block.getTypeId()), "You placed a " + block.getType().toString()));
+		}
 		
 	}
+	}
 	
-}
+
